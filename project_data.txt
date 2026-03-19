@@ -1,0 +1,65 @@
+
+
+
+
+Loop to read all files and folders in main folder("zadania") :
+
+isFile("./zadania");
+
+async function isFile(FILE_PATH){
+    const mainFolder = await readdir(FILE_PATH, 'utf8');
+
+    for(const subFiles of mainFolder){
+        const p = `${FILE_PATH}/${subFiles}`;
+        const stats = await stat(p);
+
+        if(stats.isDirectory()){
+            const reduceP = p.replace(FILE_PATH, "");
+            console.log(`|${reduceP}|`);
+            await isFile(p);
+        }
+        else{
+            console.log(p);
+        }
+    }
+}
+
+
+// this creates a new html page with ... :
+
+//res.post('/', (res, req)=>{...
+// res.send(`
+//     <p>Folders name: ${folderName}</p>
+//     <p>Files name: ${fileName}</p>
+//     <p>Text inside: ${text}</p>
+//     <a href="/">Back</a>`);  
+//})
+
+
+
+
+
+//Structure for my aside :
+
+// for (const folder in data) {
+//   const div = document.createElement("div");
+//   const folderName = document.createElement("h5");
+//   folderName.textContent = "Folder: " + folder;
+//   div.appendChild(folderName);
+//   for (const file in data[folder]) {
+//     const fileName = document.createElement("h3");
+//     fileName.textContent = file;
+//     const p = document.createElement("p");
+//     p.textContent = data[folder][file];
+//     div.appendChild(fileName)
+//     fileName.appendChild(p);
+//   }
+//   aside.appendChild(div);
+// }
+
+
+//resend to index.html :
+
+res.sendFile(path.join(__dirname, "index.html"));
+|!| OR ||
+res.redirect("/");

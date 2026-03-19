@@ -1,0 +1,394 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #14191b;
+}
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #010508;
+    border-bottom: 1px solid azure;
+}
+nav h1{
+    position: relative;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+    color: snow;
+    margin: 16px auto 16px 11px;
+}
+.buttons{
+    position: relative;
+    bottom: 0;
+    width: 440px;
+    height: 40px;
+    margin-left: 10px;
+}
+.buttons > span{
+    position: relative;
+    display: block;
+    background-color: transparent;
+    color: snow;
+    width: 110px;
+    float: left;
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    transition: 0.3s;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.buttons > span:hover{
+    border-bottom: 3px solid orange;
+    background-color: #232323;
+}
+
+nav > h2{
+    /* position */
+    position: relative;
+    display: block;
+    width: auto;
+    height: 60px;
+    float: right;
+    margin: 20px 20px 40px auto;
+    top: -115px;
+    font-size: 25px;
+    line-height: 60px;
+
+
+    /* color */
+    background: linear-gradient(10190deg,rgba(0, 247, 255, 1) 0%, rgba(85, 255, 0, 1) 25%, rgba(183, 255, 0, 1) 50%, rgba(85, 255, 0, 1) 75%, rgba(0, 247, 255, 1) 100%);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    animation: animate 10s linear infinite;
+}
+.prof_image{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    top: -115px;
+    float: right;
+    border-radius: 50%;
+    margin: 20px 15px 40px auto;
+    transition: 0.3s;
+}
+
+
+
+
+
+form{
+    position: absolute;
+    top: 122px;
+    left: 0;
+    width: 500px;
+    height: calc(100vh - 125px);
+    color: snow;
+    background-color: #020d16;
+    font-size: 25px;
+    font-style: bold;
+    place-items: 50px;
+}
+input:first-child{
+    margin-top: 100px;
+}
+form > input{
+    position: relative;
+    width: 80%;
+    height: 35px;
+    line-height: 35px;
+    font-size: inherit;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    background-color: #14191b;
+    color: snow;
+    border: 3px solid rgb(11, 12, 26);
+    border-radius: 7.5px;
+    margin: auto 50px 5px 50px;
+    padding-left: 5px;
+}
+form > button{
+    position: relative;
+    width: 350px;
+    height: 40px;
+    margin:  200px 75px auto 75px;
+    line-height: 45px;
+    font-size: 20px;
+    text-align: center;
+    color: snow;
+    background-color: #232327;
+    border: 1px solid rgba(240, 255, 255, 0.301);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+form > button:hover{
+    background-color: #2e2e33;
+}
+form > button:active{
+    background-color: #5a5c68;
+    color: #020d16;
+}
+
+
+
+aside{
+    position: absolute;
+    top: 152px;
+    right: 250px;
+    width: 550px;
+    height: 650px;
+    color: snow;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow-y: scroll;
+    border: 3px solid rgba(240, 255, 255, 0.301);
+    padding: 1px;
+}
+aside::-webkit-scrollbar{
+    background: #232324;
+}
+aside::-webkit-scrollbar-thumb{
+    background: rgb(41, 82, 192);
+}
+
+
+aside > div{
+    position: relative;
+    width: 530px;
+    margin: 1px 2px 10px 2px;
+    z-index: 3;
+}
+
+
+aside > div > div{
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding-left: 2px;
+
+    border: 1px solid rgba(240, 255, 255, 0.301);
+    border-radius: 5px;
+    z-index: 4;
+}
+
+aside > div > div > span{
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+    z-index: 5;
+    transition: 0.2s;
+    color: rgb(41, 82, 192);
+    text-decoration: underline;
+    font-size: 20px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+aside > div > div > span:hover{
+    color: snow;
+}
+
+.deleteButton{
+    position: relative;
+    float: right;
+    background-color: transparent;
+    color: snow;
+    width: 25%;
+    top: -45px;
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 30px;
+    transition: 0.4s;
+    z-index: 6;
+}
+
+.deleteButton:hover{
+    color: red;
+    border-radius: 8px;
+}
+
+
+
+
+/* MessageBox but in html */
+
+#messageBox{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    left: -700px;
+    top: -700px;
+    border: 3px solid ghostwhite;
+    border-radius: 10px;
+    background-color: #020d16;
+    color: snow;
+    z-index: 100;
+}
+#messageBox > h1{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    color: snow;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#messageBox > h2{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    color: snow;
+    line-height: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#messageBox > textarea{
+    position: relative;
+    width: 450px;
+    height: 225px;
+    margin: 5px 25px 20px 25px;
+    background-color: #14191b;
+    border-radius: 5px;
+    color: snow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    resize: none;
+}
+#messageBox > div{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+}
+#messageBox > div > button{
+    position: relative;
+    width: 155px;
+    height: 100%;
+    margin: 0 50px 0 50px;
+    color: snow;
+    background-color: #232327;
+    border: 1px solid rgba(240, 255, 255, 0.301);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+#messageBox > div > button:hover{
+    background-color: #2e2e33;
+}
+#messageBox > div > button:active{
+    background-color: #5a5c68;
+    color: #020d16;
+}
+
+
+
+#overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(27, 27, 27, 0.726);
+}
+
+
+
+
+
+#tutorial{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 800px;
+    left: -850px;
+    top: -850px;
+    border: 3px solid ghostwhite;
+    border-radius: 10px;
+    background-color: #020d16;
+    color: snow;
+    padding: 20px;
+    z-index: 100;
+}
+#tutorial > h2{
+    position: relative;
+    font-size: 30px;
+    color: snow;
+    margin-bottom: 15px;
+}
+#tutorial > img{
+    position: relative;
+    border: 2px solid rgba(240, 255, 255, 0.301);
+    padding-bottom: 45px;
+}
+
+#tutorial > div{
+    position: relative;
+    margin-top: 70px;
+    height: 200px;
+    padding: 10px;
+}
+#tutorial > div > h4{
+    position: relative;
+    color: snow;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 7.5px;
+}
+#tutorial > div > button{
+    position: relative;
+    width: 100px;
+    height: 40px;
+    color: snow;
+    background-color: #14191b;
+    border: 1px solid rgba(240, 255, 255, 0.301);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#tutorial > div > button:hover{
+    background-color: #2e2e33;
+    color: azure;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+.hide{
+    opacity: 0;
+    display: none;
+}
+
+@keyframes animate{
+    to{
+        background-position-x: -500px;
+    }
+}

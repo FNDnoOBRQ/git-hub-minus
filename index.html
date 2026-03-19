@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="overlay"></div>
+    <nav id="nav">
+        <h1>git files & folders</h1>
+        <div class="buttons">
+            <span onclick="showAll()">Show all</span>
+            <span onclick="hideAll()">Hide all</span>
+            <span onclick="settings()">Settings</span>
+            <span onclick="(()=>{ let answer = confirm('Are you sure?'); if(answer){window.close();}})()">Exit website</span>
+        </div>
+        <img class="prof_image" src="truePNGImage.png" alt="...">
+        <h2 class="name">User#3905</h2>
+    </nav>
+    <main>
+        <form id="form" action="/" method="POST">
+            <input type="text" id="category" name="folderName" placeholder="Category..."><br><br><br>
+            <input type="text" id="filesName" name="fileName" placeholder="Files name..."><br><br><br>
+            <input type="text" id="text" name="text" placeholder="Text..."><br><br><br>
+            <button id="add" type="submit" onclick="add">Modify</button>
+        </form>
+    </main>
+    <aside id="aside"></aside>
+
+    <section id="messageBox" class="hide">
+        <h1 id="foldersName">Folders Name:</h1>
+        <h2 id="subFilesName">Files name:</h2>
+        <textarea name="textArea" id="textArea"></textarea>
+        <div id="buttons">
+            <button id="Save">Save</button><button id="Exit">Exit</button>
+        </div>
+    </section>
+
+    <section id="tutorial">
+        <h2>Tutorial</h2>
+        <img src="tutorial.jpg" alt="...">
+        <div>
+            <h4>Change mode:</h4>
+            <button id="buttonChangeMode">Light/dark</button>
+            <h4>Exit:</h4>
+            <button id="buttonExit">Exit</button>
+        </div>
+    </section>
+
+    <script src="functions.js"></script>
+</body>
+</html>
